@@ -1,0 +1,12 @@
+{{> navbar}}
+{{> head }}
+
+<div class="jumbotron ">
+    <h1 class="display-4 ">Upload a file</h1>
+    <form action='/upload' method='post' enctype="multipart/form-data">
+        <input type="file" name="sampleFile" />
+        <input type='submit' value='Upload!' />
+    </form>
+</div>
+
+{{> footer}}

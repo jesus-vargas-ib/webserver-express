@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bco-codes",
+  "private_key_id": "869c8359ed95f6d97cc2b3025594584c2330ee9d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCrc6HyYUP1mKQk\nyif2LYbme6+YFZKF44kglT+xgUTqQIK3khuTbVqbbSpT8j2suiQSD9CMXVSamjNL\n9BBHM67jUGreszwg6bYfJp/H4e9MYyDa4/lGf8NCc9lWn/oiqMTGbEDh7eonLzHX\nD5bOJwvcJdDiTB2yVzf9t4GchlQ/4yhChy5I93yZ2GG/z872FFRkSYRym5UM+IWk\nmoIR8A+jBZgikI6cEg/2+wJFRmCANOqQhIaRnNzHr3PKyQAkH6+uFloV9dl9+KtR\nVVi/HV0DEsmGBsYpX4jrUeygqTAjAepD/rzT61eQlHQSXxU+L2XEzFhpwYL09Gm/\nl0EOZBJ5AgMBAAECggEABvDi96+Ks0jPLbLGGbgac9PtC2tQJ73K7DfulgPljiri\nFTFujrIzeVha3tQkkrdkb3DBdh/vJWUkZNOddxciDOTRYXEAeFVN1gatGvKhdUZh\navXQvn28ohY+OxILQSzzmRQtL5hUoup3tOerfhlkPbDa5dZusKzJllVqrgiyz3U/\nI+eRrbS9KvNRQDXRW22VVF8YAaQDcadT1yORwh4/qqlFzq7FRIk3tZGJIqX+4PJc\nk4M26tyBcuQK2857PhYrBTPObsy1RR7IdvwVkjSTgxxUl7HIS8J3lfnjZsX/SUX3\neyXNpI1vr8guB55rmAMDNfTi/PWtCktAzgiXAB8c2wKBgQDycNf4Yib3oLf1dZbC\nMlpFqxduW2MDtxEJr8vavTvGhiIlKmGMggRC+Ew4LnVzOkKL96g+tEYZUEO4X2hB\nz2LYe53vQvvNX7HrJ1IRWtXVaRtJcCnTP+h4WvHt5VDR1eF6j8Ohn3DNBjsiBNrr\nMwuvVAjqBKH9636tJBOptpGUUwKBgQC1CmZB2xElj1g0whZKmySeyPqZ4y36XPxs\nO113bB48EDz+UbeoIPyFkNbUGy15Brk/Al/uDwWWOS/Fylqk1d0rhkVxNtxi8Toq\nsZcofMoS3VCametsTnaQpE1mkenFTwxTfHccMysfyXs444Q1QkGeYrsjeG/pIWzR\nb/nJSaCkgwKBgFU8SSHhWDPdRG++3Lb/vu8ZfM5mwMPwm8PdE32e5CIizGRmpw8g\nMuFcrGdgJhjR1c2hz3vkI3UI3BY5LM1eXTEhHOCemyqUR1gWZesGFYHHRzmlfn7v\nzApsZvwtkCGF4ZUWcEAlbyIV27pVHKZuNuB4Wf30jQNZxRqYQXV8Y2hTAoGAEFNt\nwUaWF0MD+039YKD4/nC1WKdKACfeg4we86QGXfhA59ZKr5i57PmQxfPld+KJVgtK\nx1cHc/KYQkfrQK4gkco7/OernCiQzETTks0eE/FtUWPL/SpeOtD2QeeqoyZrwCOb\nQinDG8y5lfm+dGcTL8tLgPldbjKbc4+bgPFo0S0CgYBHnWcnMsaIFgDX5hY/Spyd\njd2gyjer02n0ShdYTLPyuYwXFuEEZMCJfySdZXFDiZl7F1ShKuH20nJrEEWrSNwX\nC4zp3tXk8ZD3/mo5piDfWg1RV4HtYIT3xoRtDNxW5HRWV+sOQa19O+2AbBFjYiF7\nOMVmwFErYvwNCuXhGH5giA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloud-storage@bco-codes.iam.gserviceaccount.com",
+  "client_id": "108836507333298418405",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-storage%40bco-codes.iam.gserviceaccount.com"
+}

@@ -5,13 +5,15 @@
     "main": "index.js",
     "scripts": {
         "start": "node server.js",
-        "nodemon": "nodemon server.js",
+        "nodemon": "nodemon server.js -e js,hbs",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@google-cloud/storage": "^2.3.1",
         "express": "^4.16.4",
+        "express-fileupload": "^1.0.0",
         "hbs": "^4.0.1"
     }
 }
