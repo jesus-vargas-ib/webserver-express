@@ -7,7 +7,7 @@
         {{#ifCond files.length '>' 0}}
         <ul>
             {{#each files}}
-            <li><a href="download?id={{this.name}}">{{@index}} - {{this.name}}</a></li>
+            <li><a href="download?id={{this.name}}">{{@index}} - {{this.name}}</a> [[<a href="delete?id={{this.name}}">Borrar</a>]]</li>
             {{/each}}
         </ul>
         {{else}}

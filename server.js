@@ -56,6 +56,18 @@ app.get('/download', (req, res) => {
 
 })
 
+app.get('/delete', (req, res) => {
+    let id = req.query.id;
+
+    getBucketSalida().file(id).delete((err, response) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect('/list');
+        }
+    });
+})
+
 app.get('/about', (req, res) => {
     res.render('about');
 })
