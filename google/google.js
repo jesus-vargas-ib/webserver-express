@@ -2,6 +2,7 @@
 const { Storage } = require('@google-cloud/storage');
 const projectId = 'bco-codes';
 const CLOUD_BUCKET = 'ejemplo-node';
+const CLOUD_BUCKET_SALIDA = 'ejemplo-node-salida';
 
 const fs = require('fs');
 const path = require('path');
@@ -14,9 +15,14 @@ const storage = new Storage({
     keyFilename: gTokenPath,
 });
 const bucket = storage.bucket(CLOUD_BUCKET);
+const bucketSalida = storage.bucket(CLOUD_BUCKET_SALIDA);
 
 const getBucket = () => {
     return bucket;
+}
+
+const getBucketSalida = () => {
+    return bucketSalida;
 }
 
 const getPublicUrl = (filename) => {
@@ -26,5 +32,7 @@ const getPublicUrl = (filename) => {
 module.exports = {
     getBucket,
     CLOUD_BUCKET,
+    CLOUD_BUCKET_SALIDA,
+    getBucketSalida,
     getPublicUrl
 }

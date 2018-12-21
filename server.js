@@ -3,9 +3,37 @@ const fileUpload = require('express-fileupload');
 const app = express();
 const hbs = require('hbs');
 const fs = require('fs');
-const { getBucket, CLOUD_BUCKET, getPublicUrl } = require('./google/google');
+const { getBucket, CLOUD_BUCKET, CLOUD_BUCKET_SALIDA, getBucketSalida, getPublicUrl } = require('./google/google');
 require('./hbs/helpers')
 const port = process.env.PORT || 3000;
+
+hbs.registerHelper('ifCond', function(v1, operator, v2, options) {
+
+    switch (operator) {
+        case '==':
+            return (v1 == v2) ? options.fn(this) : options.inverse(this);
+        case '===':
+            return (v1 === v2) ? options.fn(this) : options.inverse(this);
+        case '!=':
+            return (v1 != v2) ? options.fn(this) : options.inverse(this);
+        case '!==':
+            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
+        case '<':
+            return (v1 < v2) ? options.fn(this) : options.inverse(this);
+        case '<=':
+            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+        case '>':
+            return (v1 > v2) ? options.fn(this) : options.inverse(this);
+        case '>=':
+            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+        case '&&':
+            return (v1 && v2) ? options.fn(this) : options.inverse(this);
+        case '||':
+            return (v1 || v2) ? options.fn(this) : options.inverse(this);
+        default:
+            return options.inverse(this);
+    }
+});
 
 // default options
 app.use(fileUpload());
@@ -21,6 +49,38 @@ app.get('/', (req, res) => {
     res.render('home', {
         nombre: 'jesÚs vaRgas'
     });
+
+})
+
+app.get('/list', (req, res) => {
+    let bucket = getBucketSalida();
+    bucket.getFiles((err, files) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('listFiles', {
+                files: files
+            });
+        }
+    });
+
+})
+
+app.get('/download', (req, res) => {
+    let id = req.query.id;
+
+    getBucketSalida().file(id).download((err, data) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.writeHead(200, {
+                'Content-Type': 'application/octet-stream',
+                'Content-disposition': 'attachment;filename=' + id,
+                'Content-Length': data.length
+            });
+            res.end(new Buffer(data, 'binary'));
+        }
+    })
 
 })
 

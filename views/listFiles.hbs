@@ -1,0 +1,18 @@
+{{> head }}
+
+
+    {{> navbar }}
+    <div class="jumbotron ">
+        <h1 class="display-4 ">Archivos encontrados</h1>
+        {{#ifCond files.length '>' 0}}
+        <ul>
+            {{#each files}}
+            <li><a href="download?id={{this.name}}">{{@index}} - {{this.name}}</a></li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <p>No hay contenido a mostrar</p>
+        {{/ifCond}}
+    </div>
+
+{{> footer }}
