@@ -7,34 +7,6 @@ const { getBucket, CLOUD_BUCKET, CLOUD_BUCKET_SALIDA, getBucketSalida, getPublic
 require('./hbs/helpers')
 const port = process.env.PORT || 3000;
 
-hbs.registerHelper('ifCond', function(v1, operator, v2, options) {
-
-    switch (operator) {
-        case '==':
-            return (v1 == v2) ? options.fn(this) : options.inverse(this);
-        case '===':
-            return (v1 === v2) ? options.fn(this) : options.inverse(this);
-        case '!=':
-            return (v1 != v2) ? options.fn(this) : options.inverse(this);
-        case '!==':
-            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
-        case '<':
-            return (v1 < v2) ? options.fn(this) : options.inverse(this);
-        case '<=':
-            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-        case '>':
-            return (v1 > v2) ? options.fn(this) : options.inverse(this);
-        case '>=':
-            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-        case '&&':
-            return (v1 && v2) ? options.fn(this) : options.inverse(this);
-        case '||':
-            return (v1 || v2) ? options.fn(this) : options.inverse(this);
-        default:
-            return options.inverse(this);
-    }
-});
-
 // default options
 app.use(fileUpload());
 
@@ -47,7 +19,7 @@ app.set('view engine', 'hbs');
 app.get('/', (req, res) => {
 
     res.render('home', {
-        nombre: 'jesÚs vaRgas'
+        nombre: 'Guest ^_^'
     });
 
 })
